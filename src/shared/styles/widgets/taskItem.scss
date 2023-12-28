@@ -1,0 +1,87 @@
+.task__item {
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  outline: 1px solid #333333;
+
+  .task__cart {
+    display: flex;
+    padding: 25px;
+    height: 100%;
+    flex-direction: column;
+
+    .task__content {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 15px;
+
+      .task__responsible {
+        @include _fonts(700, 15px, 20px, #000);
+
+        span {
+          @include _fonts(400, 15px, 20px, #000);
+        }
+      }
+
+      .task__status {
+        margin-top: auto;
+        @include _fonts(700, 15px, 20px, #000);
+
+        span {
+          margin-left: 5px;
+          @include _fonts(400, 15px, 20px, #000);
+        }
+      }
+
+      .task__date-update {
+        @include _fonts(700, 15px, 20px, #000);
+
+        span {
+          @include _fonts(400, 15px, 20px, #000);
+        }
+      }
+    }
+
+    .task__actions {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .task__delete {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+
+        svg {
+          width: 17px;
+          height: 17px;
+          color: $redColor;
+        }
+      }
+
+      .task__change {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+
+        svg {
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+  }
+
+  .ready {
+    background-color: #21fc40;
+  }
+
+  .process {
+    background-color: #ffd416;
+  }
+}

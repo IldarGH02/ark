@@ -1,0 +1,27 @@
+.navbar {
+  width: calc(15% - 15px);
+  padding: 20px;
+  border-right: 1px solid rgba(38, 38, 38, 0.12);
+
+  .navbar__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .navbar__navigation {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+
+      .navigation__link {
+        text-decoration: none;
+        @include _fonts(400, 17px, 17px, #000);
+      }
+
+      .active {
+        color: #0d57f5;
+      }
+   }
+ }
+}

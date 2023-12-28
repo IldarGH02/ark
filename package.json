@@ -39,5 +39,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@reduxjs/toolkit": "^2.0.1",
+    "@types/compose-function": "^0.0.33",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/redux-logger": "^3.0.12",
+    "compose-function": "^3.0.3",
+    "react-icons": "^4.12.0",
+    "react-redux": "^9.0.4",
+    "react-router-dom": "^6.21.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^3.1.0",
+    "sass": "^1.69.5"
   }
 }

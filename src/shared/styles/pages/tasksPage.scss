@@ -1,0 +1,54 @@
+.tasksPage {
+  position: relative;
+  width: 100%;
+  padding: 10px 0 20px 0;
+
+  .tasksPage__top {
+    display: flex;
+    max-width: 100%;
+    padding: 0 20px 10px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333333;
+
+    .tasksPage__actions {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+
+      .tasksPage__search {
+        padding: 10px 10px;
+        border: none;
+        border-radius: 5px;
+        outline: 1px solid #333;
+        @include _fonts(400, 17px, 17px, #000)
+      }
+
+      .tasksPage__select {
+        padding: 10px 10px;
+        border: none;
+        border-radius: 5px;
+        outline: 1px solid #333;
+        @include _fonts(400, 17px, 17px, #000)
+      }
+
+      .tasksPage__create-task {
+        cursor: pointer;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: $blueColor;
+        transition: color .3s ease, background-color .3s ease, outline .3s ease;
+        @include _fonts(400, 15px, 17px, #fff);
+
+        &:hover {
+          background-color: transparent;
+          outline: 1px solid $blueColor;
+          color: #000;
+        }
+      }
+    }
+  }
+}

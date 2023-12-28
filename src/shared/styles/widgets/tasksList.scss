@@ -1,0 +1,7 @@
+.tasks__list {
+  display: grid;
+  padding: 0 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  list-style: none;
+}
