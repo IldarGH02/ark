@@ -13,12 +13,3 @@ export interface IUserResponse {
     uid: string,
     accessToken: string
 }
-
-export interface IAuthForm {
-    classNameEmail: string
-    classNamePassword: string
-
-    buttonName: string
-    buttonClassName: string
-    onClick: (email: string, password: string) => void
-}

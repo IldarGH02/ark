@@ -5,7 +5,6 @@ import {useState} from "react";
 import {createUserWithEmailAndPassword, getAuth} from "firebase/auth";
 import {useAppDispatch} from "../../features/hooks";
 import { setUser } from "../../app/store/slices/userSlice";
-import { IUserResponse } from "../../app/types/types";
 import { useNavigate } from 'react-router-dom'
 
 export const RegisterForm = () => {
@@ -22,24 +21,25 @@ export const RegisterForm = () => {
                 dispatch(setUser({
                     email: user.email,
                     id: user.uid,
-                    token: user.accessToken
+                    token: user.accessToken,
+                    isAuth: true
                 }))
-                navigate('/')
+                navigate('/home')
             })
             .catch(console.error)
     }
 
     return (
-            <form className="register__form" onSubmit={event => event.preventDefault()}>
+            <form className="register__form d-flex flex-column gap-3 w-50 align-items-center" onSubmit={event => event.preventDefault()}>
                 <MyInput
-                    className='register__input-email'
+                    className='register__input-email register__form-input w-100'
                     value={email}
                     type='text'
                     placeholder='Введите email'
                     onChange={(event) => setEmail(event.target.value)}
                 />
                 <MyInput
-                    className='register__input-password'
+                    className='register__input-password register__form-input w-100'
                     value={password}
                     type='password'
                     placeholder='Введите password'
@@ -47,7 +47,7 @@ export const RegisterForm = () => {
                 />
                 <MyButton
                     buttonName='Зарегистрироваться'
-                    className='register__button-submit'
+                    className='register__button-submit btn btn-primary w-50'
                     onClick={(e) => handleRegister(email, password, e)}/>
             </form>
     )

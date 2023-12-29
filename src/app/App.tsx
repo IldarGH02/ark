@@ -1,21 +1,24 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import { Provider as ReduxProvider } from "react-redux"
 
-import { Navbar } from "../widgets/navbar";
-import { Routing } from "../pages";
-import { withProviders } from "./providers";
 import './style/index.scss'
 import { store } from "./store";
+import { BrowserRouter } from "react-router-dom";
+import {useAppSelector} from "../features/hooks";
+import {MainRouting} from "../pages/mainRouting";
 
 function App() {
-  return (
-      <div className='appWrapper'>
-          <ReduxProvider store={store}>
-              <Navbar/>
-              <Routing/>
-          </ReduxProvider>
-      </div>
-  );
+    return (
+          <div className='appWrapper'>
+              <ReduxProvider store={store}>
+                  <BrowserRouter>
+                      <Suspense fallback='Загрузка...'>
+                          <MainRouting/>
+                      </Suspense>
+                  </BrowserRouter>
+              </ReduxProvider>
+          </div>
+    );
 }
 
-export default withProviders(App);
+export default App;

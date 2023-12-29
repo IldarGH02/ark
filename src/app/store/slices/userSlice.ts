@@ -4,14 +4,16 @@ interface IInitialState {
     email: string | null
     token: string | null
     id: string | null
-    isAuth: boolean
+    isAuth: boolean,
+    error: null | string
 }
 
 const initialState:IInitialState = {
     email: null,
     token: null,
     id: null,
-    isAuth: false
+    isAuth: false,
+    error: null
 }
 
 const userSlice = createSlice({
@@ -22,11 +24,14 @@ const userSlice = createSlice({
             state.email = action.payload.email
             state.token = action.payload.token
             state.id = action.payload.id
+            state.isAuth = action.payload.isAuth
+            state.error = action.payload.error
         },
         removeUser(state) {
             state.email = null
             state.token = null
             state.id = null
+            state.isAuth = false
         }
     }
 })

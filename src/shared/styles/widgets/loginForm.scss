@@ -1,0 +1,16 @@
+.login__form {
+  padding: 20px;
+  border-radius: 5px;
+  outline: 1px solid #333333;
+
+  .login__form-input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    outline: 1px solid #333333;
+  }
+
+  .error {
+    outline: 1px solid red;
+  }
+}

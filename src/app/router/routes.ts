@@ -11,14 +11,6 @@ interface IPath {
 }
 export const routes: IPath[] = [
     {
-        path: '/login',
-        component: Login
-    },
-    {
-        path: '/register',
-        component: Register
-    },
-    {
         path: '/home',
         component: HomePage
     },
@@ -35,10 +27,10 @@ export const routes: IPath[] = [
 export const authRoutes: IPath[] = [
     {
         path: '/login',
-        component: TasksPage
+        component: Login
     },
     {
         path: '/register',
-        component: RealizedObjects
+        component: Register
     }
 ]
