@@ -1,11 +1,11 @@
 import React from 'react';
 import { Provider as ReduxProvider } from "react-redux"
 
-import {Navbar} from "../widgets/navbar";
-import {Routing} from "../pages";
-import {withProviders} from "./providers";
+import { Navbar } from "../widgets/navbar";
+import { Routing } from "../pages";
+import { withProviders } from "./providers";
 import './style/index.scss'
-import {store} from "./store";
+import { store } from "./store";
 
 function App() {
   return (

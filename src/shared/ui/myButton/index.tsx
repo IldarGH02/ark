@@ -5,6 +5,7 @@ interface IMyButton {
     buttonName: string | ReactNode
     className: string
     onClick: React.MouseEventHandler<HTMLButtonElement>
+
 }
 
 export const MyButton: React.FC<IMyButton> = (props) => {

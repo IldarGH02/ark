@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 export const Navbar = () => {
     return (
-        <div className='navbar'>
+        <div className='navbar-side'>
             <div className="navbar__container">
                 <div className="navbar__content">
                     <nav className='navbar__navigation'>

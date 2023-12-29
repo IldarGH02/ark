@@ -19,6 +19,10 @@ body {
       height: 100%;
       flex-direction: row;
       justify-content: space-between;
+
+      .main {
+        width: 100%;
+      }
     }
   }
 }

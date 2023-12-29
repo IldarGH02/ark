@@ -1,6 +1,7 @@
 import {Title} from "../../widgets/title";
 
 export const HomePage = () => {
+
     return (
         <section className='homePage'>
             <div className="container">
